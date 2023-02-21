@@ -1,7 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./App.css";
 import Header from "./components/Header";
-import HomePage from "./pages/HomePage";
 import { Outlet } from "react-router-dom";
 
 function App() {
