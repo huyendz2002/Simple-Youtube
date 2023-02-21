@@ -1,19 +1,46 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import './index.css';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "./index.css";
+import store from "./redux/store/configureStore";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import DetailPage from "./pages/DetailPage";
+import VideoSearchPage from "./pages/VideoSearchPage";
+import HomePage from "./pages/HomePage";
 
-const container = document.getElementById('root');
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <Provider store={store}>
+        <App />
+      </Provider>
+    ),
+    children: [
+      {
+        path: "/",
+        element: <HomePage></HomePage>,
+      },
+      {
+        path: "/video/:videoId",
+        element: <DetailPage></DetailPage>,
+      },
+      {
+        path: "/search",
+        element: <VideoSearchPage></VideoSearchPage>,
+      },
+    ],
+  },
+]);
+
+const container = document.getElementById("root");
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
