@@ -14,6 +14,14 @@ code {
 ::-webkit-scrollbar {
   @apply hidden;
 }
+/* @media screen and (max-width: 426px) {
+  .home {
+    display: block;
+  }
+  .sidebar {
+    display: flex;
+  }
+} */
 
 @tailwind base;
 @tailwind components;

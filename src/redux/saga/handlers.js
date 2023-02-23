@@ -24,10 +24,10 @@ export default function* handleGetTopic(action) {
 
 export function* handleGetDetail(action) {
   try {
-    // yield
+    // yield put(setLoading(true));
     const response = yield call(requestGetDetail, action.payload);
-    // console.log(response.data);
     yield put(setDetail(response.data.items));
+    // yield put(setLoading(false));
   } catch (error) {
     console.log(error);
   }

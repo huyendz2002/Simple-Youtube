@@ -15,7 +15,7 @@ async function requestGetTopic(query = "New") {
       order: "date",
     },
     headers: {
-      "X-RapidAPI-Key": "4b5c805839mshcd094bce9a3d09cp171badjsn96132de4294c",
+      "X-RapidAPI-Key": "KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA",
       "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
     },
   };
@@ -35,7 +35,7 @@ async function requestGetDetail(id) {
     url: "https://youtube-v31.p.rapidapi.com/videos",
     params: { part: "contentDetails,snippet,statistics", id: `${id}` },
     headers: {
-      "X-RapidAPI-Key": "4b5c805839mshcd094bce9a3d09cp171badjsn96132de4294c",
+      "X-RapidAPI-Key": "KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA",
       "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
     },
   };
@@ -54,7 +54,7 @@ export async function requestGetRelate(id) {
       maxResults: "50",
     },
     headers: {
-      "X-RapidAPI-Key": "4b5c805839mshcd094bce9a3d09cp171badjsn96132de4294c",
+      "X-RapidAPI-Key": "KJwZZIJSFimshuivMSVGaiYzkRomp15f2vKjsnK4bKzuUzVLzA",
       "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
     },
   };
