@@ -10,10 +10,10 @@ import { getSubmit } from "./submitSlice";
 import { getTopic } from "./topicSlice";
 
 export default function* topicSaga() {
-  yield takeLatest(getTopic.type, handleGetTopic);
+  yield takeLatest(getTopic().type, handleGetTopic);
 }
 export function* detailSaga() {
-  yield takeLatest(getDetail.type, handleGetDetail);
+  yield takeLatest(getDetail().type, handleGetDetail);
 }
 export function* relateSaga() {
   yield takeLatest(getRelate().type, handleGetRelate);
